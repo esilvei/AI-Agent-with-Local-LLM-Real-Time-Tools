@@ -27,10 +27,10 @@ This project implements an AI assistant capable of intelligently deciding when t
 Clone this repository and install the dependencies. Since this project uses uv, you can sync instantly:
 Bash
 
-# Recommended (using uv)
+#### Recommended (using uv)
 uv sync
 
-# Standard (using pip)
+#### Standard (using pip)
 pip install -r requirements.txt
 
 ### 3. Configuration (.env)
@@ -46,10 +46,10 @@ Note: If no key is provided, the weather tool will handle the error gracefully, 
 Run the main script to test Math, General Knowledge, and Real-time Weather:
 Bash
 
-# Using uv
+#### Using uv
 uv run src/main.py
 
-# Or standard python
+#### Or standard python
 python src/main.py
 
 ### 5. Running Tests
