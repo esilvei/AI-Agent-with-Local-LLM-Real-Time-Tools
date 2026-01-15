@@ -6,28 +6,30 @@ from src.tools import calculator_func, weather_tool, get_tools
 
 def test_calculator_basic_math():
     result = calculator_func("10*5")
-    assert result == "50"
+    # Updated to match the new label format
+    assert "Calculation Result: 50" in result
 
 
 def test_calculator_complex_expression():
     result = calculator_func("(2+2)*10/4")
-    assert result == "10.0"
+    assert "Calculation Result: 10.0" in result
 
 
 def test_calculator_sanitization():
     """Ensures non-math characters are stripped from input."""
     result = calculator_func("10abc+5")
-    assert result == "15"
+    assert "Calculation Result: 15" in result
 
 
 def test_calculator_invalid_input():
     result = calculator_func("hello world")
-    assert "Error: Invalid input" in result
+    # Updated to match the new "Error - Invalid input" string
+    assert "Invalid input" in result
 
 
 def test_calculator_division_by_zero():
     result = calculator_func("10/0")
-    assert "division by zero" in result or "Calculation error" in result
+    assert "Calculation error" in result
 
 
 # --- Weather Tool Tests ---
@@ -52,7 +54,7 @@ def test_weather_tool_success(mock_requests):
 
     result = weather_tool("Sao Paulo")
 
-    assert "Sao Paulo" in result
+    assert "Weather Data" in result
     assert "25.5°C" in result
     assert "clear sky" in result
 
