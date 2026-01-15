@@ -17,7 +17,6 @@ def initialize_agent():
         return None
 
     tools = get_tools()
-    tools = get_tools()
 
     template = config.AGENT_TEMPLATE
 
